@@ -32,8 +32,8 @@ class GameObject {
     this.name = object.name;
     this.dimensions = object.dimensions;
     }
-    destroy() {
-    console.log(`${this.name} was removed from the game.`);
+    destroy(){
+    return `${this.name} was removed from the game.`;
     };
 }
 
@@ -49,14 +49,9 @@ class CharacterStats extends GameObject {
         super(points);
         this.healthPoints = points.healthPoints;
     }  
-    takeDamage() {
-        if(this.healthPoints) {
-        console.log(`${this.name} took damage.`);
-        }
-    };
-    destroy() {
-        console.log(`${this.name} was removed from the game.`);
-    };
+    takeDamage(){
+        return `${this.name} took damage.`;
+    }
 }
 
 /*
@@ -75,20 +70,10 @@ class Humanoid extends CharacterStats{
         this.team =character.team;
         this.weapons = character.weapons;
         this.language = character.language;
-    }
-    greet() {
-        if(this.character){
-        console.log(`${this.name} offers a greeting in ${this.language}.`);
         }
-    }
-    destroy() {
-        console.log(`${this.name} was removed from the game.`);
-    };
-    takeDamage() {
-        if(this.healthPoints) {
-        console.log(`${this.name} took damage.`);
+    greet(){
+        return `${this.name} offers a greeting in ${this.language}.`;
         }
-    };
 }
 
 /*
