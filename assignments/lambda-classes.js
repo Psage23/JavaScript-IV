@@ -36,8 +36,9 @@ class Students extends Person{
         this.grade = scholar.grade
     }
     listsSubjects(){
-        return this.favSubjects;
+        this.favSubjects.map(item => console.log(item));
     }
+    
     PRAssignment(subject){
         return `${this.name} has submitted a PR for ${subject}`;
     }
@@ -105,7 +106,7 @@ const debbie = new ProjectManager({
 console.log(doug.speak());
 console.log(dave.demo('HTML'));
 console.log(dave.grade('JavaScript'));
-console.log(doc.listsSubjects());
+doc.listsSubjects();
 console.log(doc.PRAssignment('Ruby'));
 console.log(doc.sprintChallenge('Advanced CSS'));
 console.log(debbie.standUp('Bob','web25'));
